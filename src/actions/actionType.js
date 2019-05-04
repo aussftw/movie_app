@@ -1,0 +1,16 @@
+export const SEARCH_MOVIE = "SEARCH_MOVIE";
+export const FETCH_MOVIES = "FETCH_MOVIES";
+export const FETCH_MOVIES_BY_GENRE = "FETCH_MOVIES_BY_GENRE";
+export const FETCH_GENRE = "FETCH_GENRE";
+export const FETCH_MOVIE_DETAILS = "FETCH_MOVIE_DETAILS";
+export const FETCH_RELATED_MOVIES = "FETCH_RELATED_MOVIES";
+export const FETCH_MOVIE_CAST = "FETCH_CREDITS_MOVIES";
+export const CLEANING_MOVIE_STATE = "CLEANING_MOVIE_STATE";
+export const GET_ACTOR_PROFILE = "GET_ACTOR_PROFILE";
+export const GET_ACTOR_CREDIT_MOVIES = "GET_ACTOR_CREDIT_MOVIES";
+
+export const CHANGE_SEARCH_FIELD = "CHANGE_SEARCH_FIELD";
+
+export const API_KEY = "bcc62cd0ae2694d5d52747a14d34ecac";
+export const DEFAULT_URL = "https://api.themoviedb.org/3";
+export const CORS_PROXY = "https://cors.io/?"
