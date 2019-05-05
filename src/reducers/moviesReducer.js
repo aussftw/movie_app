@@ -1,34 +1,27 @@
-import { FETCH_MOVIES } from "../actions/actionType";
+import { FETCH_MOVIES_PENDING, FETCH_MOVIES_SUCCESS, FETCH_MOVIES_FAILED } from "../actions/actionType";
 
-const initialState = {
-  genres: [],
+const initialStateMovies = {
   isLoading: false,
   movies: [],
-  page: 1,
-  totalPages: 1,
-  totalResults: 0,
-  genreId: 0,
   error: ""
 };
 
-export default (state = initialState, action) => {
+export const requestMovies = (state = initialStateMovies, action = {}) => {
   switch (action.type) {
-    case `${FETCH_MOVIES}_PENDING`: {
+    case FETCH_MOVIES_PENDING: {
       return {
         ...state,
         isLoading: true
       };
     }
-    case `${FETCH_MOVIES}_SUCCESS`: {
+    case FETCH_MOVIES_SUCCESS: {
       return {
         ...state,
         isLoading: false,
-        movies: action.payload.data.results,
-        page: action.payload.data.total_pages,
-        totalResults: action.payload.total_results
+        movies: action.payload
       };
     }
-    case `${FETCH_MOVIES}_FAILED`: {
+    case FETCH_MOVIES_FAILED: {
       return { ...state, isLoading: false, error: action.payload };
     }
     default:

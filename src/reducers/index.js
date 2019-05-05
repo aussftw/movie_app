@@ -1,14 +1,7 @@
 import { combineReducers } from "redux";
-import movieReducer from "./movieReducer";
-// import searchFieldReducer from "./searchFiledReducer";
-import searchMovieReducer from "./searchMovieReducer";
-import moviesReducer from "./moviesReducer";
+import { getMovieDetail } from "./searchMovieReducer";
+import { requestMovies } from "./moviesReducer";
+import { requestDetail } from "./detailsReducer";
 
-const reducers = {
-  movieDetailsStore: movieReducer,
-  moviesStore: moviesReducer,
-  searchMovieStore: searchMovieReducer
-};
-
-const rootReducer = combineReducers(reducers);
+const rootReducer = combineReducers({ requestMovies, getMovieDetail, requestDetail });
 export default rootReducer;
